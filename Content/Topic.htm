@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2546" MadCap:lastWidth="1218">
+    <head>
+        <link href="../../NewProject tfs/Content/Resources/TableStyles/Basic123.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Topic Title</h1>
+        <p class="p_1">Authentication Testing</p>
+        <div class="div_1">
+            <p class="p_2">
+                <span class="span_1">Clear any login cache currently stored by deleting the information stored at the following location&#160;</span>
+                <span class="span_1">
+                    <br>
+                    </br>
+                </span>
+                <span class="span_2">Subversion:</span>
+                <span class="span_1">&#160;Use Tortoise -&gt; Settings -&gt; Saved Data -&gt; Clear (Authentication Data)</span>
+            </p>
+            <p class="p_3">HTTP protocol uses domain authentication.</p>
+        </div>
+        <p class="p_4">P - Specifies if you were prompted</p>
+        <p class="p_4">S - Specifies if connection was successful</p>
+        <p class="p_4">&#160;</p>
+        <table class="TableStyle-Basic123" style="width: 484px;mc-table-style: url('../../NewProject tfs/Content/Resources/TableStyles/Basic123.css');" cellspacing="0">
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <tr class="TableStyle-Basic123-Body-Body1">
+                <td class="TableStyle-Basic123-BodyE-Column1-Body1">
+                    <p class="p_4">Connect with no log in (no user) on computer within domain</p>
+                </td>
+                <td class="TableStyle-Basic123-BodyD-Column1-Body1">
+                    <p class="p_4">&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic123-Body-Body2">
+                <td class="TableStyle-Basic123-BodyE-Column1-Body2">
+                    <p class="p_4">Log in with approved user on computer within domain</p>
+                </td>
+                <td class="TableStyle-Basic123-BodyD-Column1-Body2">
+                    <p class="p_4">&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic123-Body-Body1">
+                <td class="TableStyle-Basic123-BodyE-Column1-Body1">
+                    <p class="p_4">Connect with no log in (no user) on computer in a Workgroup</p>
+                </td>
+                <td class="TableStyle-Basic123-BodyD-Column1-Body1">
+                    <p class="p_4">&#160;</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-Basic123-Body-Body2">
+                <td class="TableStyle-Basic123-BodyE-Column1-Body2">
+                    <p class="p_4">Log in with approved user on computer in a Workgroup</p>
+                </td>
+                <td class="TableStyle-Basic123-BodyD-Column1-Body2">
+                    <p class="p_4">&#160;</p>
+                </td>
+            </tr>
+        </table>
+        <p class="p_1">Functionality Testing</p>
+        <p class="p_5">Before proceeding with the following tests, install Tortoise SVN (http://tortoisesvn.net/) so that status of files in the repository can be checked with SVN Repo Browser</p>
+        <p class="p_6">Starting with Flare 9, there is a "Web Print Mobile" template project that is a good test project with files that are interlinked to other files.</p>
+        <p class="p_4">&#160;</p>
+        <table class="TableStyle-Basic123" style="mc-table-style: url('../../NewProject tfs/Content/Resources/TableStyles/Basic123.css');width: 1164px;" cellspacing="0">
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <col class="TableStyle-Basic123-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-Basic123-Head-Header1">
+                    <th class="TableStyle-Basic123-HeadE-Column1-Header1">
+                        <p class="p_7">&#160;</p>
+                    </th>
+                    <th class="TableStyle-Basic123-HeadE-Column1-Header1">
+                        <p class="p_8">Status in</p>
+                        <p class="p_8">Content Explorer</p>
+                    </th>
+                    <th class="TableStyle-Basic123-HeadE-Column1-Header1">
+                        <p class="p_8">Status in</p>
+                        <p class="p_8">Pending Check-in Window</p>
+                    </th>
+                    <th class="TableStyle-Basic123-HeadE-Column1-Header1">
+                        <p class="p_8">Status in</p>
+                        <p class="p_8">Repository</p>
+                    </th>
+                    <th class="TableStyle-Basic123-HeadE-Column1-Header1">
+                        <p class="p_8">Status in</p>
+                        <p class="p_8">File List Window</p>
+                    </th>
+                    <th class="TableStyle-Basic123-HeadE-Column1-Header1">Provider Explorer</th>
+                    <th class="TableStyle-Basic123-HeadD-Column1-Header1" style="color: #ff0000;">ISSUES&#160;ALONG&#160;THE&#160;WAY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Basic123-Body-Body1" MadCap:pattern="1">
+                    <td colspan="5" class="TableStyle-Basic123-BodyE-Column1-Body1">
+                        <h2 style="color: #696969;">Basic Functions</h2>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Create New Project/Bind to VC</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Bind existing Project to VC</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Unbind a Project from VC</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">After Unbinding Project from VC - make some changes to files/folders in local project and make sure the copy in the repository is not affected</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Import a Project from VC</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Add Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Rename a Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Rename a Single File with Links</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Move a Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Moving a Single File with Links</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;font-weight: bold;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #ff8c00;">
+                        <p class="p_4">
+                            <span style="color: #2e8b57;">Check Out Single File</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #ff8c00;">
+                        <p class="p_4">
+                            <span style="color: #696969;">Undo Checkout of a Single File</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #ff8c00;">
+                        <p class="p_4">
+                            <span style="color: #2e8b57;">Lock a single file</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #ff8c00;">
+                        <p class="p_4">
+                            <span style="color: #696969;">Attempt to lock a file that is already locked</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">
+                        <p class="p_4">
+                            <span style="color: #2e8b57;">Lock a single file and check it in. On another computer lock the same file and check it in</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">
+                        <p class="p_4">
+                            <span style="color: #696969;">Attempt to Check Out Single File that is Checked out to another User</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Add new folder and drag an existing topic into that folder and check it in</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Add new folder and create a new topic in that folder and check it in</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Add Comment to Check In</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Check In Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Prompt to Save when checking in a file</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Get Latest Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">View History of a Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Show Differences of a Single File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">View History of a Renamed File</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td colspan="5" class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <h2>'Multiple' Functions</h2>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Add Multiple Files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Check Out Multiple Files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Check Out Multiple Files when one or more are already Checked out</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Check out and lock multiple files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Check out and lock multiple files when one or more are already locked</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Check In Multiple Files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Get Latest Multiple Files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">
+                        <p class="p_4">
+                            <span style="color: #696969;">Undo Checkout of Multiple Files</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Rename Multiple Files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Move&#160; Multiple Files to a Subfolder</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Move Multiple Files to a Folder above it</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Moving Multiple Files with Links</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Move a folder that has all checked-in files that link to other files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Move a folder that has all checked-out files that link to other files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Move a folder that has a mix of checked-in, checked-out, and pending-add files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Rename a folder that has all checked-in files that link to other files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Rename a folder that has all checked-out files that link to other files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Rename a folder that has a mix of checked-in, checked-out, and pending-add files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td colspan="5" class="TableStyle-Basic123-BodyE-Column1-Body2">
+                        <h2 style="color: #696969;">Deleting</h2>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Delete a checked-in file and check-in the change</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Delete a checked-out file and check-in the change</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">
+                        <p class="p_4">
+                            <span style="color: #696969;">Delete a pending-add file</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #556b2f;">
+                        <p class="p_4">Delete a folder with all checked-in files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #556b2f;">
+                        <p class="p_4">Delete a folder with all checked-out files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #556b2f;">
+                        <p class="p_4">Delete a folder with pending-add files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #556b2f;">
+                        <p class="p_4">Delete a folder with a mix of checked-in, checked-out, and pending-add files</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td colspan="5" class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <h2>Merging - Two User/Computer Test Cases</h2>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Both users check-out the same file and make non-conflicting changes. Both users check in changes. Auto resolve these changes and make sure both copies are updated correctly.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Both users check-out the same file and make conflicting changes. Verify in the merge tool that the correct server version and local version is shown. Verify that the changes you make are applied to both copies.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Both users check-out the same file and make conflicting changes. Have one user choose to undo local changes. Verify the local copy is updated correctly.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Both users check-out the same file and make conflicting changes. Have one user choose to discard external changes. Verify the server copy is updated correctly.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Both users check-out the same file. One user deletes the file , the other user checks in the file before doing a Get Latest.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Both users check-out the same file. One user renames the file , then the second user checks in the file before doing a Get Latest.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Both users have files checked out and one user renames the folder holding the files - and checks in changes. &#160;Second user checks in changes before doing a Get Latest.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td colspan="5" class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <h2>Misc</h2>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Sending an Instant Message</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">IM User Status</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Get latest on project Open</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td colspan="5" class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <h2>Advanced Functions</h2>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Generate an output with 'Get Latest' checked and an import file with get latest checked</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">
+                        <p class="p_4">
+                            <span style="color: #696969;">Move a File that has dependencies checked out to another User</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Get latest when generating option in targets</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Get latest when generating command line</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Bind a Project that has the same name as an Existing project in VC</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Rename a file that is Out of Date</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Edit a file that is Out Of Date</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #556b2f;">
+                        <p class="p_4">Edit a topic and save (don't check it in). Add a new topic, right click and add it. Make sure the edited topic is not checked in also.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #556b2f;">
+                        <p class="p_4">Check in all + Add comment + Verify comments were added</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #556b2f;">
+                        <p class="p_4">Import a project into Analyzer that is bound to source control</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">
+                        <p class="p_4">
+                            <span style="color: #696969;">Move a pending-add file and then delete it after it is moved</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">
+                        <p class="p_4">
+                            <span style="color: #2e8b57;">Move a pending-add folder with a file and then delete it after it is moved</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Rename a pending-add file and then check-it in</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Rename a pending-add file and then delete it</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #2e8b57;">
+                        <p class="p_4">Move a checked-in file and then delete it</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #2e8b57;">
+                        <p class="p_4">Move a checked-out file and then delete it</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td colspan="7" class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #696969;">
+                        <h2>Offline Testing</h2>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Disconnect YOUR PC. Launch Flare and open a Bound Project.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">
+                        <p class="p_4">Open a bound Project. Disconnect YOUR PC. Do VC commands.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body2">
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">
+                        <p class="p_4">Open a bound Project. Disconnect the SERVER. Do VC commands.</p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyD-Column1-Body2" style="color: #ff0000;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-Basic123-Body-Body1">
+                    <td class="TableStyle-Basic123-BodyB-Column1-Body1" style="color: #696969;">
+                        <p class="p_10">
+                            <span class="span_1">Disconnect SERVER. Launch Flare and open a Bound Project</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-Basic123-BodyB-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyB-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyB-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyB-Column1-Body1" style="color: #696969;">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-Basic123-BodyA-Column1-Body1" style="color: #ff0000;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>
